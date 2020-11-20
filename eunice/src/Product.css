@@ -1,0 +1,108 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+svg circle {
+  transition: fill ease 0.2s;
+}
+
+svg circle:hover {
+  fill: #211d55;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.carousel-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.back-btn {
+  margin: 10px;
+}
+
+h4.bestsellers {
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+  text-align: center;
+  letter-spacing: 0.19em;
+  color: #000;
+}
+
+.product-img {
+  width: 263px;
+  /* height: 166px; */
+}
+
+.product {
+  display: inline-block;
+  width: 285px;
+  height: 285px;
+  left: 120px;
+  top: 2017px;
+}
+
+.product-name-price {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+  max-width: 200px;
+  /* margin: 0 auto;
+  max-width: 158px; */
+}
+
+.product-name {
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 13px;
+  /* figma had font size 15
+  i changed it because it didn't
+  look like it on the web */
+  text-align: center;
+}
+
+.product-price {
+  margin: 0 auto;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.19em;
+}
+
+.bestsellers-btn {
+  background: #211d55;
+  height: 55px;
+  width: 301px;
+  left: 0px;
+  top: 0px;
+  border-radius: 5px;
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  color: #fafafa;
+  transition: background ease 0.2s;
+}
+
+.bestsellers-btn:hover {
+  background: #999999;
+}
