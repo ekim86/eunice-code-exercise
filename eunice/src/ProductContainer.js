@@ -1,10 +1,9 @@
 import React from "react";
 import productsdata from "./challenge.products.json";
 import ProductComponent from "./ProductComponent";
-import "./Product.css";
+import { ForwardButton, BackButton } from "./svgs";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "./Product.css";
 
 class ProductContainer extends React.Component {
   renderProducts() {
@@ -14,18 +13,36 @@ class ProductContainer extends React.Component {
   }
 
   render() {
-    let settings = {
-      dots: false,
+    const settings = {
       infinite: true,
-      speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      nextArrow: <ForwardButton />,
+      prevArrow: <BackButton />,
+      responsive: [
+        // this will change is window size is diff
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
     };
-    return (
-      // <div>
-      <Slider {...settings}>{this.renderProducts()}</Slider>
-      // </div>
-    );
+
+    return <Slider {...settings}>{this.renderProducts()}</Slider>;
   }
 }
 

@@ -1,6 +1,12 @@
-export const ForwardButton = ({ hoverColor }) => {
+export const ForwardButton = (props) => {
+  const { className, style, onClick } = props;
+  //declaring my props here ^^^
   return (
-    <>
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent" }}
+      onClick={onClick}
+    >
       <svg
         width="26"
         height="26"
@@ -24,13 +30,18 @@ export const ForwardButton = ({ hoverColor }) => {
           stroke="white"
         />
       </svg>
-    </>
+    </div>
   );
 };
 
-export const BackButton = ({ hoverColor }) => {
+export const BackButton = (props) => {
+  const { className, style, onClick } = props;
   return (
-    <>
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent" }}
+      onClick={onClick}
+    >
       <svg
         width="26"
         height="26"
@@ -55,6 +66,6 @@ export const BackButton = ({ hoverColor }) => {
           stroke="white"
         />
       </svg>
-    </>
+    </div>
   );
 };

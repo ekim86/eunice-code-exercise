@@ -1,8 +1,8 @@
-// import logo from './logo.svg';
 import "./App.css";
 import ProductContainer from "./ProductContainer.js";
 import "./Product.css";
-import { ForwardButton, BackButton } from "./svgs";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -11,10 +11,6 @@ function App() {
         <div className="title-btn-container">
           <div></div>
           <h4 className="bestsellers">SHOP BESTSELLERS</h4>
-          <div className="carousel-btn-container">
-            <BackButton />
-            <ForwardButton />
-          </div>
         </div>
         <ProductContainer />
 
@@ -27,5 +23,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

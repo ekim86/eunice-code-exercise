@@ -9,31 +9,17 @@ body {
   text-align: center;
 }
 
-svg circle {
-  transition: fill ease 0.2s;
+a {
+  text-decoration: none;
 }
 
 svg circle:hover {
   fill: #211d55;
 }
 
-a {
-  text-decoration: none;
-}
-
 .title-btn-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}
-
-.carousel-btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.back-btn {
-  margin: 10px;
 }
 
 h4.bestsellers {
@@ -49,7 +35,6 @@ h4.bestsellers {
 
 .product-img {
   width: 263px;
-  /* height: 166px; */
 }
 
 .product {
@@ -65,17 +50,15 @@ h4.bestsellers {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 5px;
   max-width: 200px;
-  /* margin: 0 auto;
-  max-width: 158px; */
 }
 
 .product-name {
   margin: 0 auto;
   margin-top: 10px;
-  font-size: 13px;
   /* figma had font size 15
   i changed it because it didn't
   look like it on the web */
+  font-size: 13px;
   text-align: center;
 }
 
@@ -89,6 +72,7 @@ h4.bestsellers {
 
 .bestsellers-btn {
   background: #211d55;
+  margin-top: 30px;
   height: 55px;
   width: 301px;
   left: 0px;
@@ -105,4 +89,36 @@ h4.bestsellers {
 
 .bestsellers-btn:hover {
   background: #999999;
+}
+
+/* React-Slick Package Styling*/
+.slick-next::before,
+.slick-next {
+  right: 75px !important;
+  z-index: 1;
+}
+
+.slick-prev::before,
+.slick-prev {
+  left: auto !important;
+  right: 115px !important;
+  z-index: 1;
+  transition: content ease 0.3s;
+}
+
+.slick-arrow {
+  top: -23% !important;
+}
+/* ^^^React-Slick Package Styling^^^ */
+
+@media only screen and (max-width: 1100px) {
+  .slick-next::before,
+  .slick-next {
+    right: 30px !important;
+  }
+
+  .slick-prev::before,
+  .slick-prev {
+    right: 70px !important;
+  }
 }
